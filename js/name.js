@@ -9,9 +9,8 @@ document.addEventListener("DOMContentLoaded", function () {
     if (inputName.value.trim() === "") {
       // Si no se ha ingresado un nombre, evitar que se vaya a la siguiente página
       event.preventDefault();
-      alert("Please enter a name before proceeding.");
+      alert("PLEASE SET A NAME.");
     } else {
-      // Si se ha ingresado un nombre, puedes almacenarlo en SessionStorage
       localStorage.setItem("playerName", inputName.value.trim());
     }
   });

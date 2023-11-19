@@ -10,12 +10,10 @@ function ApplySelectedColors(element, color) {
     element.style.backgroundColor = color;
   }
 }
-// Aplica los colores a los elementos correspondientes
 ApplySelectedColors(document.getElementById("selectedColor1"), color1);
 ApplySelectedColors(document.getElementById("selectedColor2"), color2);
 ApplySelectedColors(document.getElementById("selectedColor3"), color3);
 ApplySelectedColors(document.getElementById("selectedColor4"), color4);
-// FIN COLORES
 
 // Mostrar el nombre del jugador
 let showSelectedName = document.getElementById("showSelectedName");
@@ -40,7 +38,6 @@ function generateCorrectAnswer() {
 // Obtener la respuesta correcta
 const correctKeyArray = generateCorrectAnswer();
 
-// Define your constants for rows
 const rows = [
   ["#row1c1", "#row1c2", "#row1c3", "#row1c4"],
   ["#row2c1", "#row2c2", "#row2c3", "#row2c4"],
@@ -69,10 +66,9 @@ selectedColor3.addEventListener("click", function () {
 selectedColor4.addEventListener("click", function () {
   applyColorToRows(selectedColor4.style.backgroundColor);
 });
-// Counter to keep track of the current target element
+
 let currentRow = 0;
 let currentColumn = 0;
-// Asegúrate de obtener la referencia al botón checkButton en tu código HTML
 
 const backgroundbox = (box) => {
   return window.getComputedStyle(box).backgroundColor;
@@ -129,10 +125,6 @@ const checkbox102 = document.getElementById("checkbox10-2");
 const checkbox103 = document.getElementById("checkbox10-3");
 const checkbox104 = document.getElementById("checkbox10-4");
 
-// const row1c1 = document.getElementById("row1c1");
-// const row1c2 = document.getElementById("row1c2");
-// const row1c3 = document.getElementById("row1c3");
-// const row1c4 = document.getElementById("row1c4");
 let checkIterador = 1;
 
 document.addEventListener("DOMContentLoaded", function () {
@@ -524,12 +516,12 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 });
 
-// Function to apply color to the specified row and column
+// funcion para aplicar el color a la row y columna especificada
 function applyColorToRows(color) {
   const targetElement = document.querySelector(rows[currentRow][currentColumn]);
   targetElement.style.backgroundColor = color;
 
-  // Move to the next column or row based on the current position
+  // avanza a la siguiente columna
   if (currentColumn < 3) {
     currentColumn++;
   } else {

@@ -5,14 +5,14 @@ document.addEventListener("DOMContentLoaded", function () {
   var selectedColors = [];
 
   colorBoxes.addEventListener("input", function () {
-    // Recorre todos los inputs de color y agrega los valores al array
+    // Recorre los inputs de color y agrega los valores al array
     selectedColors = Array.from(colorBoxes.getElementsByTagName("input")).map(
       (input) => input.value
     );
   });
 
   nextButton.addEventListener("click", function (event) {
-    // Verifica si se han seleccionado 4 colores diferentes y no hay colores vacíos
+    // verifica que se han seleccionado 4 colores diferentes y no hay colores vacíos
     if (
       selectedColors.length === 4 &&
       new Set(selectedColors).size === 4 &&
@@ -24,7 +24,7 @@ document.addEventListener("DOMContentLoaded", function () {
       // Almacena los colores en localStorage
       localStorage.setItem("selectedColors", JSON.stringify(selectedColorsRGB));
 
-      // Redirige a la siguiente página
+      // Avanza a la siguiente página
       window.location.href = "../pages/mastermind.html";
     } else {
       event.preventDefault();
@@ -35,7 +35,7 @@ document.addEventListener("DOMContentLoaded", function () {
   // Función para convertir HEX a RGB
   function hexToRgb(hex) {
     // Elimina el # del inicio si está presente
-    hex = hex.replace(/^#/, '');
+    hex = hex.replace(/^#/, "");
 
     // Divide el string en pares de caracteres
     var bigint = parseInt(hex, 16);
@@ -45,8 +45,7 @@ document.addEventListener("DOMContentLoaded", function () {
     var g = (bigint >> 8) & 255;
     var b = bigint & 255;
 
-    // Retorna el formato RGB
-    return 'rgb(' + r + ', ' + g + ', ' + b + ')';
+    // devuelve el formato en RGB
+    return "rgb(" + r + ", " + g + ", " + b + ")";
   }
 });
-
