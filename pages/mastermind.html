@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mastermind</title>
+    <link rel="stylesheet" href="/css/style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Tourney:wght@700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="logoPages">
+      <a href="../index.html"><img src="../img/Logo.svg" alt="logo" /></a>
+    </div>
+    <div class="gamebox">
+      <div class="gamebox-indicators">
+        <div class="selectedUsername">
+          <div>NAME:</div>
+          <div id="showSelectedName"></div>
+        </div>
+        <div class="selectedColor-box">
+          <div id="selectedColor-name">YOUR COLORS</div>
+          <div id="selectedColor1"></div>
+          <div id="selectedColor2"></div>
+          <div id="selectedColor3"></div>
+          <div id="selectedColor4"></div>
+        </div>
+        <div class="checkButtons">
+          <div class="removeButton" id="removeButton">REMOVE</div>
+          <div class="checkButton" id="checkButton">CHECK</div>
+        </div>
+      </div>
+      <div class="gamebox-play">
+        <div class="game">
+          <div class="game-try">1</div>
+          <div class="coloredbox">
+            <div class="color1" id="row1c1"></div>
+            <div class="color2" id="row1c2"></div>
+            <div class="color3" id="row1c3"></div>
+            <div class="color4" id="row1c4"></div>
+          </div>
+          <div class="rightchoice">
+            <div class="checkbox" id="checkbox1-1"></div>
+            <div class="checkbox" id="checkbox1-2"></div>
+            <div class="checkbox" id="checkbox1-3"></div>
+            <div class="checkbox" id="checkbox1-4"></div>
+          </div>
+        </div>
+        <div class="game">
+          <div class="game-try">2</div>
+          <div class="coloredbox">
+            <div class="color1" id="row2c1"></div>
+            <div class="color2" id="row2c2"></div>
+            <div class="color3" id="row2c3"></div>
+            <div class="color4" id="row2c4"></div>
+          </div>
+          <div class="rightchoice">
+            <div class="checkbox" id="checkbox2-1"></div>
+            <div class="checkbox" id="checkbox2-2"></div>
+            <div class="checkbox" id="checkbox2-3"></div>
+            <div class="checkbox" id="checkbox2-4"></div>
+          </div>
+        </div>
+        <div class="game">
+          <div class="game-try">3</div>
+          <div class="coloredbox">
+            <div class="color1" id="row3c1"></div>
+            <div class="color2" id="row3c2"></div>
+            <div class="color3" id="row3c3"></div>
+            <div class="color4" id="row3c4"></div>
+          </div>
+          <div class="rightchoice">
+            <div class="checkbox" id="checkbox3-1"></div>
+            <div class="checkbox" id="checkbox3-2"></div>
+            <div class="checkbox" id="checkbox3-3"></div>
+            <div class="checkbox" id="checkbox3-4"></div>
+          </div>
+        </div>
+        <div class="game">
+          <div class="game-try">4</div>
+          <div class="coloredbox">
+            <div class="color1" id="row4c1"></div>
+            <div class="color2" id="row4c2"></div>
+            <div class="color3" id="row4c3"></div>
+            <div class="color4" id="row4c4"></div>
+          </div>
+          <div class="rightchoice">
+            <div class="checkbox" id="checkbox4-1"></div>
+            <div class="checkbox" id="checkbox4-2"></div>
+            <div class="checkbox" id="checkbox4-3"></div>
+            <div class="checkbox" id="checkbox4-4"></div>
+          </div>
+        </div>
+        <div class="game">
+          <div class="game-try">5</div>
+          <div class="coloredbox">
+            <div class="color1" id="row5c1"></div>
+            <div class="color2" id="row5c2"></div>
+            <div class="color3" id="row5c3"></div>
+            <div class="color4" id="row5c4"></div>
+          </div>
+          <div class="rightchoice">
+            <div class="checkbox" id="checkbox5-1"></div>
+            <div class="checkbox" id="checkbox5-2"></div>
+            <div class="checkbox" id="checkbox5-3"></div>
+            <div class="checkbox" id="checkbox5-4"></div>
+          </div>
+        </div>
+        <div class="game">
+          <div class="game-try">6</div>
+          <div class="coloredbox">
+            <div class="color1" id="row6c1"></div>
+            <div class="color2" id="row6c2"></div>
+            <div class="color3" id="row6c3"></div>
+            <div class="color4" id="row6c4"></div>
+          </div>
+          <div class="rightchoice">
+            <div class="checkbox" id="checkbox6-1"></div>
+            <div class="checkbox" id="checkbox6-2"></div>
+            <div class="checkbox" id="checkbox6-3"></div>
+            <div class="checkbox" id="checkbox6-4"></div>
+          </div>
+        </div>
+        <div class="game">
+          <div class="game-try">7</div>
+          <div class="coloredbox">
+            <div class="color1" id="row7c1"></div>
+            <div class="color2" id="row7c2"></div>
+            <div class="color3" id="row7c3"></div>
+            <div class="color4" id="row7c4"></div>
+          </div>
+          <div class="rightchoice">
+            <div class="checkbox" id="checkbox7-1"></div>
+            <div class="checkbox" id="checkbox7-2"></div>
+            <div class="checkbox" id="checkbox7-3"></div>
+            <div class="checkbox" id="checkbox7-4"></div>
+          </div>
+        </div>
+        <div class="game">
+          <div class="game-try">8</div>
+          <div class="coloredbox">
+            <div class="color1" id="row8c1"></div>
+            <div class="color2" id="row8c2"></div>
+            <div class="color3" id="row8c3"></div>
+            <div class="color4" id="row8c4"></div>
+          </div>
+          <div class="rightchoice">
+            <div class="checkbox" id="checkbox8-1"></div>
+            <div class="checkbox" id="checkbox8-2"></div>
+            <div class="checkbox" id="checkbox8-3"></div>
+            <div class="checkbox" id="checkbox8-4"></div>
+          </div>
+        </div>
+        <div class="game">
+          <div class="game-try">9</div>
+          <div class="coloredbox">
+            <div class="color1" id="row9c1"></div>
+            <div class="color2" id="row9c2"></div>
+            <div class="color3" id="row9c3"></div>
+            <div class="color4" id="row9c4"></div>
+          </div>
+          <div class="rightchoice">
+            <div class="checkbox" id="checkbox9-1"></div>
+            <div class="checkbox" id="checkbox9-2"></div>
+            <div class="checkbox" id="checkbox9-3"></div>
+            <div class="checkbox" id="checkbox9-4"></div>
+          </div>
+        </div>
+        <div class="game">
+          <div class="game-try" id="number10">10</div>
+          <div class="coloredbox">
+            <div class="color1" id="row10c1"></div>
+            <div class="color2" id="row10c2"></div>
+            <div class="color3" id="row10c3"></div>
+            <div class="color4" id="row10c4"></div>
+          </div>
+          <div class="rightchoice">
+            <div class="checkbox" id="checkbox10-1"></div>
+            <div class="checkbox" id="checkbox10-2"></div>
+            <div class="checkbox" id="checkbox10-3"></div>
+            <div class="checkbox" id="checkbox10-4"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="../js/main.js"></script>
+  </body>
+</html>
