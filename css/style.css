@@ -350,7 +350,8 @@ body {
     align-items: center;
 }
 
-.removeButton, .checkButton {
+/* .removeButton, */
+.checkButton { 
     display: flex;
     justify-content: center;
     align-items: center;

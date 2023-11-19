@@ -536,29 +536,3 @@ function applyColorToRows(color) {
     currentColumn = 0;
   }
 }
-
-document.addEventListener("DOMContentLoaded", function () {
-  const removeButton = document.getElementById("removeButton");
-
-  if (removeButton) {
-    removeButton.addEventListener("click", function () {
-      // Obtén la fila actual
-      const currentRowArray = rows[currentRow];
-
-      // Encuentra el último elemento coloreado en la fila actual
-      const lastColoredElement = currentRowArray
-        .map((columnId) => document.querySelector(columnId))
-        .reverse()
-        .find((element) => element.style.backgroundColor !== "");
-
-      // Si se encuentra un elemento coloreado, quita el color
-      if (lastColoredElement) {
-        lastColoredElement.style.backgroundColor = "";
-      } else {
-        // Si no hay elementos coloreados, muestra un mensaje o realiza la acción deseada
-        alert("No colors to remove in this row.");
-      }
-    });
-  }
-});
-
